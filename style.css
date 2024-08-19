@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --pale-navy: #36384d;
+  --dark-navy: #242742;
+  --vermellion: #ff6155;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: var(--pale-navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 58rem;
+  margin: auto;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 2.125rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  padding: 4.5625rem 2.5rem;
+}
+
+.content .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.content h1 {
+  color: var(--dark-navy);
+  font-size: 3.5rem;
+}
+
+.content p {
+  color: var(--dark-nav);
+  line-height: 150%;
+}
+
+.content ul {
+  list-style-image: url("./assets/images/icon-list.svg");
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.content ul li {
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group label {
+  color: var(--dark-navy);
+  line-height: 150%;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.form-group .error {
+  color: var(--vermellion);
+  font-size: 0.75rem;
+  line-height: 150%;
+  font-weight: bold;
+}
+
+.form-group .error.hidden {
+  display: none;
+}
+
+.form-control.danger {
+  background-color: rgba(255, 97, 85, 0.15);
+  color: var(--vermellion);
+}
+.form-group input {
+  padding: 1rem 1.5rem;
+  border: 1px solid hsla(231, 7%, 60%, 0.25);
+  border-radius: 0.5rem;
+}
+
+button {
+  background: var(--dark-navy);
+  color: var(--white);
+  padding: 1rem 4.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #ff6a3a, #ff527b);
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.alert {
+  width: 31.5rem;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alert .success-icon {
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+.alert h2 {
+  color: var(--dark-slate-grey);
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 100%;
+  font-weight: bold;
+}
+
+.alert p {
+  color: var(--dark-navy);
+  line-height: 150%;
+  margin-bottom: 2.5rem;
+}
+.alert.hidden {
+  display: none;
+}
+
+.alert .subscriber {
+  font-weight: bold;
+}
+
+.newsletter-figure {
+  background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+  width: 25rem;
+  height: 37.0625rem;
+  border-radius: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    overflow-y: hidden;
+  }
+
+  .newsletter-figure {
+    width: 100%;
+    max-height: 17.75rem;
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content ul {
+    list-style-image: url("./assets/images/icon-list.svg");
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .alert {
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    transform: translate(0, 0);
+    border-radius: 0;
+    padding: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="desc">
+        <h1> Stay updated!</h1>
+        <p> Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+      </div>
+      <form id="form" novalidate>
+        <div class="form-group">
+          <div class="form-label">
+            <label for="email">Email address</label>
+            <span class="error hidden">Valid email required</span>
+          </div>
+          <input type="email" class="form-control" id="email" name="email" placeholder="email@company.com">
+        </div>
+        <button type="submit"> Subscribe to monthly newsletter
+        </button>
+      </form>
+    </div>
+    <div class="newsletter-figure"></div>
+  </div>
+  <div class="alert hidden">
+    <img src="./assets/images/icon-success.svg" alt="success icon" class="success-icon">
+    <h2>Thanks for subscribing!</h2>
+    <p>A confirmation email has been sent to <span class="subscriber"></span>. Please open it and click the button
+      inside to
+      confirm your subscription.</p>
+    <button class="dismiss">Dismiss message</button>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
